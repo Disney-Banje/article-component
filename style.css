@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+html {
+    font-size: 62.5%;
+}
+
+*::before,
+*::after,
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+ul {
+    list-style: none;
+}
+
+:root {
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    background-color: var(--Light-Grayish-Blue);
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
+
+.card {
+    max-width: 73.2rem;
+    margin: 2.0rem;
+    border-radius: 1.2rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-container {
+    border-radius: 1.2rem 1.2rem 0 0;
+    height: 22.8rem;
+}
+
+.testimonial {
+    padding: 2.8rem 2.5rem 1.5rem;
+}
+
+.article-header {
+    color: var(--Very-Dark-Grayish-Blue);
+    margin-bottom: 1.25rem;
+    font-size: 1.9rem;
+}
+
+.article-description {
+    color: var(--Desaturated-Dark-Blue);
+}
+
+.client-container {
+    margin-top: 2.8rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.client-avatar {
+    width: 4.5rem;
+    border-radius: 50%;
+}
+
+.client-details {
+    flex: 1;
+}
+
+.client-name {
+    color: var(--Very-Dark-Grayish-Blue);
+    font-weight: 700;
+}
+
+.pub-date {
+    color: var(--Grayish-Blue);
+}
+
+button {
+    background-color: var(--Light-Grayish-Blue);
+    padding: 0.6rem;
+    border-radius: 50%;
+    position: relative;
+    z-index: 100;
+}
+
+button img {
+    width: 2.0rem;
+}
+
+.social-header {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.7rem;
+    letter-spacing: 0.3rem;
+    color: var(--Grayish-Blue);
+}
+
+.card-floating {
+    background-color: var(--Very-Dark-Grayish-Blue);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    gap: 2.0rem;
+    align-items: center;
+    padding: 2.0rem 2.5rem;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+li {
+    width: 2.5rem;
+    height: fit-content
+}
+
+.hidden {
+    display: none;
+}
+
+.active {
+    border: 0.25rem dotted var(--Desaturated-Dark-Blue);
+}
+
+@media screen and (min-width: 768px) {
+    .card {
+        flex-direction: row;
+        overflow: visible;
+        box-shadow: 0.3rem 0.9rem 1.5rem var(--Light-Grayish-Blue);
+    }
+
+    .banner-container img {
+        display: none;
+    }
+
+    .banner-container{
+        background-image: url('images/drawers.jpg');
+        background-size: cover;
+        height: auto;
+        flex: 35%;
+        border-radius: 1.2rem 0 0 1.2rem;
+    }
+
+    .testimonial {
+        flex: 65%;
+        padding: 2.5rem 3.5rem 2.5rem 2.5rem;
+    }
+
+    .card-floating {
+        width: fit-content;
+        right: -3.2rem;
+        bottom: 8.5rem;
+        padding: 1.2rem 2.4rem;
+        border-radius: 0.8rem;
+        box-shadow: 0.3rem 0.3rem 1.5rem var(--Grayish-Blue);
+    }
+
+    .card-floating::before {
+        content: '';
+        position: absolute;
+        bottom: -1.9rem;
+        left: 62%;
+        transform: translate(-50%);
+        border-width: 1.0rem;
+        border-style: solid;
+        border-color: var(--Very-Dark-Grayish-Blue)  transparent transparent transparent;
+    }
+}
